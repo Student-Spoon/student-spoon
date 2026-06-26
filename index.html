@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Spoon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="logo">
+<span>S</span>
+
+    Student Spoon
+</div>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<nav id="navMenu">
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('recipes')">Recipes</a>
+<a onclick="showPage('saved')">Saved</a>
+<a onclick="showPage('upload')">Recipe Upload</a>
+<a onclick="showPage('about')">About</a>
+<a onclick="showPage('feedback')">Feedback</a>
+</nav>
+</header>
+<main>
+<section id="home" class="page active">
+<div class="hero">
+<div class="hero-text">
+<h1>Healthy & Affordable Student Recipes</h1>
+<p>
+
+        Discover affordable meals, save your favourites and share delicious recipes
+
+        with students across the UK.
+</p>
+<button onclick="showPage('recipes')">Browse Recipes</button>
+<button class="secondary" onclick="showPage('upload')">Upload Recipe</button>
+</div>
+<img
+
+      src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
+
+      alt="Student meals">
+</div>
+<h2>Popular Student Recipes</h2>
+<div id="homeRecipeGrid" class="grid"></div>
+<h2>🔥 Hot Pick</h2>
+<div class="info-card hot-pick">
+<img
+
+      src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80"
+
+      alt="Chicken Gyros">
+<div>
+<h3>Chicken Gyros</h3>
+<p>
+
+        Greek-style grilled chicken served in warm pita bread with fresh salad
+
+        and tzatziki.
+</p>
+<p>
+<strong>£2.60</strong> • 20 mins • ★★★★★
+</p>
+</div>
+</div>
+</section>
+<section id="recipes" class="page">
+<h2>Browse Student Recipes</h2>
+<p class="section-text">
+
+    Browse affordable student favourites including pasta, wraps, rice dishes
+
+    and street food.
+</p>
+<input
+
+    type="text"
+
+    id="searchInput"
+
+    placeholder="Search recipes..."
+
+    onkeyup="searchRecipes()">
+<p id="noResults"></p>
+<div id="recipeGrid" class="grid"></div>
+</section>
+<section id="saved" class="page">
+<h2>Saved Recipes</h2>
+<p class="section-text">
+
+    Your saved recipes will appear here so you can find them quickly later.
+</p>
+<div id="savedList" class="grid"></div>
+</section>
+<section id="recipeDetails" class="page">
+<button onclick="showPage('recipes')" class="back-btn">
+
+    ← Back to Recipes
+</button>
+<div id="detailsContent"></div>
+</section>
+ <section id="upload" class="page">
+<h2>Upload a Recipe</h2>
+<p class="section-text">
+
+    Upload your favourite affordable recipe and share it with the Student Spoon community.
+</p>
+<form onsubmit="uploadRecipe(event)" class="form">
+<label>Recipe Title</label>
+<input
+
+      id="recipeTitle"
+
+      type="text"
+
+      placeholder="Enter recipe title">
+<label>Ingredients</label>
+<textarea
+
+      id="recipeIngredients"
+
+      placeholder="Enter ingredients"></textarea>
+<label>Cooking Instructions</label>
+<textarea
+
+      id="recipeInstructions"
+
+      placeholder="Enter cooking instructions"></textarea>
+<label>Image URL</label>
+<input
+
+      id="recipeImage"
+
+      type="text"
+
+      placeholder="Paste an image URL or leave blank">
+<button type="submit">
+
+      Submit Recipe
+</button>
+</form>
+<p id="uploadMessage"></p>
+</section>
+<section id="about" class="page">
+<h2>About Student Spoon</h2>
+<div class="info-card">
+<p>
+
+      Student Spoon is a community-based recipe sharing platform designed for students looking for affordable, quick and enjoyable meals. Users can discover new recipes, upload their own creations, save favourite meals and leave reviews to help other students choose what to cook.
+</p>
+</div>
+<div class="grid small-grid">
+<div class="info-card">
+<h3>Affordable Meals</h3>
+<p>
+
+        Browse recipes designed to suit student budgets without sacrificing flavour.
+</p>
+</div>
+<div class="info-card">
+<h3>Recipe Sharing</h3>
+<p>
+
+        Upload your own recipes and inspire other students with quick and affordable meal ideas.
+</p>
+</div>
+<div class="info-card">
+<h3>Community Reviews</h3>
+<p>
+
+        Rate recipes and leave comments so other students can find the best meals.
+</p>
+</div>
+</div>
+</section>
+<section id="feedback" class="page">
+<h2>Feedback Form</h2>
+<p class="section-text">
+
+    We'd love to hear your thoughts about Student Spoon.
+</p>
+<form onsubmit="submitFeedback(event)" class="form">
+<label>Your Name</label>
+<input
+
+      type="text"
+
+      placeholder="Enter your name">
+<label>Overall Rating</label>
+<select>
+<option value="">
+
+        Select a rating
+</option>
+<option>
+
+        Excellent
+</option>
+<option>
+
+        Good
+</option>
+<option>
+
+        Average
+</option>
+<option>
+
+        Needs Improvement
+</option>
+</select>
+<label>Comments</label>
+<textarea
+
+      placeholder="Tell us what you liked or how we could improve Student Spoon"></textarea>
+<button type="submit">
+
+      Submit Feedback
+</button>
+</form>
+<p id="feedbackMessage"></p>
+</section>
+</main>
+<footer>
+<p>
+
+    Student Spoon © 2026 | Helping Students Cook Smarter
+</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
