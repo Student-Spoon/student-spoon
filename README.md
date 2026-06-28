@@ -1,11 +1,3 @@
-# Student Spoon
-This repository contains the final implementation of the Student Spoon website.
-
-## Future Improvements
-After completing user feedback and evaluation, the following improvements were identified:
-- Expanded recipe catalogue with additional meal options.
-- Updated recipe content to better match the final Figma mock-ups.
-- Planned improvements to filtering and search.
-- Future database integration for permanent recipe storage.
-
-An example implementation of the expanded recipe dataset is included in `updated-script.js`. These changes were identified after user testing as possible future enhancements.
+Following the completion of the main website, I reviewed my final Figma designs against the website implementation. During this review, I noticed that the expanded recipe dataset used in the final design (including additional recipes, prices and cooking times) was not reflected in the original script.js that was committed to this repository.
+To document these additional content updates, an updated-script.js file has been included. This version contains the expanded recipe list used in the final design while keeping the original implementation available for reference as part of the project’s development history.
+These updates only affect the recipe content (recipe names, images, prices and cooking times). The website’s layout, functionality and features remain unchanged.
